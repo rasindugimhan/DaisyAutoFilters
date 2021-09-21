@@ -38,7 +38,7 @@ async def addchannel(client: Bot, message: Message):
         await message.reply_text(
             "<i>Please enter in the corrent manner!\n\n<code>/autofilter channelid</code>  or\n"
             "<code>/autofilter @channelusername</code></i>"
-            "\n\nGet Channel id from @ShowJsonBot",
+            "\n\nGet Channel id from @TheCozmoBot",
         )
         return
     try:
@@ -100,7 +100,7 @@ async def addchannel(client: Bot, message: Message):
     intmsg = await message.reply_text(
         "<b>Please wait while I'm adding your channel files to DB"
         "\n\nTime may vary according to files present in the channel"
-        "\nSay Hi to the support @DaisySupport_Official!!</b>"
+        "\nSay Hi to the support @CozmoSupport_Official!!</b>"
     )
 
     channel_id = chatdetails.id
@@ -179,12 +179,12 @@ async def addchannel(client: Bot, message: Message):
     if docs:
         await savefiles(docs, group_id)
     else:
-        await intmsg.edit_text("Channel couldn't be added. Try after some time!")
+        await intmsg.edit_text("Channel couldn't be added. Try after some time!If not contact us @CozmoUpdates!!")
         return
 
     await channelgroup(channel_id, channel_name, group_id, group_name)
 
-    await intmsg.edit_text("Channel added successfully!")
+    await intmsg.edit_text("Channel added successfully! Follow us @CozmoUpdates")
 
 
 @Client.on_message(filters.group & filters.command(["autofilterdel"]))
@@ -234,7 +234,7 @@ async def deletechannelfilters(client: Bot, message: Message):
 
     intmsg = await message.reply_text(
         "<b>Removing from Daisy's autofilter db"
-        "\n\nSay Hi to the support @DaisySupport_Official!</i>"
+        "\n\nSay Hi to the support @ComzoSupport_Official!</i>"
     )
 
     channel_id = chatdetails.id
